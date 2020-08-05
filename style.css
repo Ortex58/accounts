@@ -1,0 +1,48 @@
+body {
+    background-color: blanchedalmond;
+}
+.screen1, .screen2 {
+    display: none;
+}
+.active {
+    display: block;
+}
+.accounts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.accounts__items {
+    padding: 0;
+    list-style-type: none;
+}
+.accounts__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.accounts__item:focus, button:focus, input:focus {
+    border: 3px solid #1438ff;
+    outline: none;
+}
+img {
+    width: 40px;
+    margin-right: 15px;
+}
+.user-add {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.form-user-add__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.focused {
+    border: 3px solid #1438ff;
+    outline: none;
+}
+/* .accounts__item:focus {
+    color: red;
+} */
