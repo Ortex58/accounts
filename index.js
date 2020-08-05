@@ -41,8 +41,6 @@ const state = {
         inputFocused: true
     }
 }
-console.log()
-
 
 window.onload = () => {
 
@@ -150,7 +148,6 @@ document.addEventListener('keydown', (event) => {
                 if (state.firstScreen.listFocused && state.firstScreen.currentAccount == getAccountElements().length - 1) {
                     state.firstScreen.currentAccount = 0;
                     getAccountElements()[state.firstScreen.currentAccount].focus();
-                    // console.log(state.firstScreen.currentAccount);
                 }
         }
         else if (state.secondScreen.active) {
