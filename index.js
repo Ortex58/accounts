@@ -80,7 +80,12 @@ window.onload = () => {
         state.firstScreen.currentAccount = 0;
         screen2.classList.remove('active');
         screen1.classList.add('active');
-        getAccountElements()[state.firstScreen.currentAccount].focus();
+        if (getAccountElements().length) {
+            getAccountElements()[state.firstScreen.currentAccount].focus();
+        } else {
+            buttonAddAccount.focus();
+                state.firstScreen.buttonAddFocused = true;
+        }
     });
     //Click on Screen1 button ADD
     buttonAddAccount.addEventListener('click', (event) => {
@@ -121,7 +126,6 @@ function renderAccountItems() {
     if (elements.length) {
         state.firstScreen.currentAccount = 0;
         elements[0].focus();
-        console.log(elements[0]);
     }
 
 };
@@ -236,7 +240,9 @@ document.addEventListener('keydown', (event) => {
                 state.firstScreen.active = true;
                 inputFocused = false;
                 state.firstScreen.currentAccount = 0;
-                getAccountElements()[state.firstScreen.currentAccount].focus();
+                if (getAccountElements().length) {
+                    getAccountElements()[state.firstScreen.currentAccount].focus();
+                }
             }
         }
     }
